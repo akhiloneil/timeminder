@@ -236,19 +236,23 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
         // See if the timer alerts should continue repeating or if the notifications are done.
         // If notifications are done, then the code that executes is similar to that in stopTimer func
         
-        if (validHoursTimeInput != true) && (validMinutesTimeInput != true) && (validSecondsTimeInput != true) && (validHoursIntervalInput != true) && (validMinutesIntervalInput != true) && (validSecondsIntervalInput != true) {
+        if (validHoursTimeInput != true) && (validMinutesTimeInput != true) && (validSecondsTimeInput != true) && (validHoursIntervalInput != true) && (validMinutesIntervalInput != true) && (validSecondsIntervalInput != true)
+            //Check for no input at all
+        {
             sendAlert(title: "No Time Interval Selected", message: "Please select a time interval")
             appProblem = true
             resetValues()
         }
         
-        else if (validHoursIntervalInput != true) && (validMinutesIntervalInput != true) && (validSecondsIntervalInput != true) {
+        else if (validHoursIntervalInput != true) && (validMinutesIntervalInput != true) && (validSecondsIntervalInput != true) {   // Check for no interval input
             sendAlert(title: "Error: No Time Interval Selected", message: "Please select a time interval")
             appProblem = true
             resetValues()
         }
         
-        else if (validHoursTimeInput != true) && (validMinutesTimeInput != true) && (validSecondsTimeInput != true) && timeInterval >= 5 {
+        else if (validHoursTimeInput != true) && (validMinutesTimeInput != true) && (validSecondsTimeInput != true) && timeInterval >= 5
+        // check for valid interval input but no time input
+        {
             totalTime = 7200
             sendAlert(title: "Warning", message: "Total time was not selected; defaulting to 2 hours")
             appProblem = false
@@ -260,15 +264,23 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
             resetValues()
         }
         
+        else if (totalTime < timeInterval) {
+            sendAlert(title: "Error: Total Time is less than Time Interval", message: "Please enter a valid time interval")
+            appProblem = true
+            resetValues()
+        }
         
-        if appProblem != true {
+        if appProblem != true && totalTime != timeInterval {
         userSettings.repeatCount = Int(floor(totalTime/timeInterval))
         print("Skipping if statement")
         }
-        
-        else {
-            resetValues()
+        else if totalTime == timeInterval {
+            userSettings.repeatCount = 1
+            print("equals 1")
+            appProblem = false
         }
+        
+        
         //if (counter >= debugX) {
         //    keepRepeating = false
          //   print("Setting counter to false")
