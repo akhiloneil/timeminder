@@ -458,7 +458,7 @@
 				DEVELOPMENT_TEAM = 684RYC4YX2;
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharma.TimeMinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhilsharma.TimeMinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -471,7 +471,7 @@
 				DEVELOPMENT_TEAM = 684RYC4YX2;
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sharma.TimeMinder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhilsharma.TimeMinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
