@@ -8,18 +8,22 @@
 
 import UIKit
 
-protocol PreferencesDelegate {
-    func passUserSettings(settings: Bool)
-}
+
 
 
 
 class PreferencesViewController: UITableViewController {
     
     
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor.lightGray
+    }
     //var appMode: Bool = true
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     

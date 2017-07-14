@@ -16,6 +16,8 @@
 		1E8A7DB11F0B244C00744AB3 /* PacerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB01F0B244C00744AB3 /* PacerViewController.swift */; };
 		1E8A7DB31F0C203300744AB3 /* CidadeConvertAudio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */; };
 		1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */; };
+		1E8D33A51F1602D800EAB2AC /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D33A41F1602D800EAB2AC /* PageVC.swift */; };
+		1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		1E8A7DB01F0B244C00744AB3 /* PacerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacerViewController.swift; sourceTree = "<group>"; };
 		1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CidadeConvertAudio.wav; sourceTree = "<group>"; };
 		1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		1E8D33A41F1602D800EAB2AC /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +116,9 @@
 			children = (
 				1E3B9F8E1F13D158007D9D06 /* Time Keeper.entitlements */,
 				1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */,
+				1E8D33A41F1602D800EAB2AC /* PageVC.swift */,
 				1E8A7DB01F0B244C00744AB3 /* PacerViewController.swift */,
+				1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */,
 				1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */,
 				1E8A7D861F0B0B4200744AB3 /* Main.storyboard */,
 				1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */,
@@ -213,7 +219,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.InterAppAudio = {
 								enabled = 0;
@@ -288,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E8A7DB11F0B244C00744AB3 /* PacerViewController.swift in Sources */,
+				1E8D33A51F1602D800EAB2AC /* PageVC.swift in Sources */,
 				1E8A7D831F0B0B4200744AB3 /* AppDelegate.swift in Sources */,
+				1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */,
 				1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,7 +454,7 @@
 				DEVELOPMENT_TEAM = 684RYC4YX2;
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sharma.Time-Keeper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharma.TimeMinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -459,7 +467,7 @@
 				DEVELOPMENT_TEAM = 684RYC4YX2;
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sharma.Time-Keeper";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sharma.TimeMinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
