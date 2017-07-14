@@ -18,6 +18,7 @@
 		1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */; };
 		1E8D33A51F1602D800EAB2AC /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D33A41F1602D800EAB2AC /* PageVC.swift */; };
 		1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */; };
+		1EEECB551F1878E8000A19D5 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB541F1878E8000A19D5 /* BounceButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1E8D33A41F1602D800EAB2AC /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
 		1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = "<group>"; };
+		1EEECB541F1878E8000A19D5 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */,
 				1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */,
 				1E8A7D861F0B0B4200744AB3 /* Main.storyboard */,
+				1EEECB541F1878E8000A19D5 /* BounceButton.swift */,
 				1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */,
 				1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */,
 				1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */,
@@ -298,6 +301,7 @@
 				1E8A7D831F0B0B4200744AB3 /* AppDelegate.swift in Sources */,
 				1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */,
 				1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */,
+				1EEECB551F1878E8000A19D5 /* BounceButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
