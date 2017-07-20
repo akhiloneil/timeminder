@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ayp-3p-mJE" id="mXh-8U-gnF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -39,7 +39,7 @@
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2x0-2R-eLj" id="Zfg-Og-rnV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="a0a-wM-q7m">
@@ -116,7 +116,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NgJ-Tt-S5o">
-                                <rect key="frame" x="280" y="328.5" width="67" height="20.5"/>
+                                <rect key="frame" x="280.5" y="328.5" width="67" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.77254820059999996" blue="0.0255672417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -128,7 +128,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-wc-U51">
-                                <rect key="frame" x="157" y="192" width="61" height="20.5"/>
+                                <rect key="frame" x="157" y="192.5" width="61" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.77254820059999996" blue="0.0255672417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -172,7 +172,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBV-Kj-Mua">
-                                <rect key="frame" x="280" y="192" width="67" height="20.5"/>
+                                <rect key="frame" x="280.5" y="192.5" width="67" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.77254820059999996" blue="0.0255672417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -268,17 +268,21 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Time " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCK-wx-hKz">
-                                <rect key="frame" x="134" y="147.5" width="107.5" height="26.5"/>
+                                <rect key="frame" x="134" y="148" width="107.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="0.77254820059999996" blue="0.0255672417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auE-kv-sD8">
-                                <rect key="frame" x="38.5" y="192" width="46" height="20.5"/>
+                                <rect key="frame" x="38.5" y="192.5" width="46" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.77254820059999996" blue="0.0255672417" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="crX-Cs-ai5">
+                                <rect key="frame" x="177.5" y="262" width="20" height="20"/>
+                                <color key="color" red="0.93616589139999995" green="1" blue="0.50749433340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.83160298944296474" green="1" blue="0.78875798119077167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -288,6 +292,7 @@
                             <constraint firstItem="eBV-Kj-Mua" firstAttribute="centerX" secondItem="ReY-ge-WXP" secondAttribute="centerX" id="6pD-vn-LtP"/>
                             <constraint firstItem="ot8-c5-rzH" firstAttribute="top" secondItem="NgJ-Tt-S5o" secondAttribute="bottom" constant="8.5" id="7ke-CM-vfm"/>
                             <constraint firstItem="gWN-p2-9dO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="7uE-NF-31B"/>
+                            <constraint firstItem="Yv8-xg-b9H" firstAttribute="top" secondItem="crX-Cs-ai5" secondAttribute="bottom" constant="9" id="9et-3o-CYE"/>
                             <constraint firstAttribute="trailing" secondItem="ws0-fZ-wxm" secondAttribute="trailing" id="C4Z-r9-AOR"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="top" secondItem="dcP-wc-U51" secondAttribute="bottom" constant="8.5" id="D5s-Bt-7NQ"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FH1-tE-Hy5"/>
@@ -309,6 +314,7 @@
                             <constraint firstItem="8uv-xX-Fqg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ce2-Sy-saT"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="top" secondItem="auE-kv-sD8" secondAttribute="bottom" constant="8.5" id="eMC-nA-8Wm"/>
                             <constraint firstItem="Wdq-j1-PIM" firstAttribute="top" secondItem="i9R-Ly-H1O" secondAttribute="bottom" constant="20" id="gbt-Ot-j2e"/>
+                            <constraint firstItem="crX-Cs-ai5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hxS-rv-VT5"/>
                             <constraint firstItem="8uv-xX-Fqg" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="150:667" id="jDB-wl-gIk"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="top" secondItem="eBV-Kj-Mua" secondAttribute="bottom" constant="8.5" id="jpH-nj-uai"/>
                             <constraint firstItem="ot8-c5-rzH" firstAttribute="top" secondItem="ICQ-he-Pf0" secondAttribute="bottom" constant="8.5" id="kKb-ey-CQY"/>
@@ -329,6 +335,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Set TimeMinder" id="6o7-9Y-V6y"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="crX-Cs-ai5" id="cCH-74-gdR"/>
                         <outlet property="intervalHoursInput" destination="WMn-Ii-Omw" id="VmH-rq-Pjc"/>
                         <outlet property="intervalMinutesInput" destination="a58-TM-kTR" id="J95-uT-U9r"/>
                         <outlet property="intervalSecondsInput" destination="zbE-Rr-Sxr" id="UIk-IB-mma"/>
