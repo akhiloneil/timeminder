@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E4A1FF61F21A22700A37D03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */; };
 		1E8A7D831F0B0B4200744AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */; };
 		1E8A7D881F0B0B4200744AB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D861F0B0B4200744AB3 /* Main.storyboard */; };
 		1E8A7D8A1F0B0B4200744AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		1E3B9F8E1F13D158007D9D06 /* Time Keeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Time Keeper.entitlements"; sourceTree = "<group>"; };
+		1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1E8A7D7F1F0B0B4200744AB3 /* Time Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8A7D871F0B0B4200744AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E4A1FF61F21A22700A37D03 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +91,17 @@
 		1E3B9F8F1F13D159007D9D06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1E4A1FF41F21A1C500A37D03 /* Alert Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */,
+			);
+			name = "Alert Sounds";
 			sourceTree = "<group>";
 		};
 		1E8A7D761F0B0B4200744AB3 = {
@@ -116,6 +128,7 @@
 		1E8A7D811F0B0B4200744AB3 /* Time Keeper */ = {
 			isa = PBXGroup;
 			children = (
+				1E4A1FF41F21A1C500A37D03 /* Alert Sounds */,
 				1E3B9F8E1F13D158007D9D06 /* Time Keeper.entitlements */,
 				1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */,
 				1E8D33A41F1602D800EAB2AC /* PageVC.swift */,
@@ -126,7 +139,6 @@
 				1EEECB541F1878E8000A19D5 /* BounceButton.swift */,
 				1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */,
 				1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */,
-				1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */,
 				1E8A7D8E1F0B0B4200744AB3 /* Info.plist */,
 			);
 			path = "Time Keeper";

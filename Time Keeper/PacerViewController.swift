@@ -9,6 +9,7 @@
 import UIKit
 import UserNotifications
 import AudioToolbox
+import AVFoundation
 
 struct userSettings {
     static var modeSettings = true
@@ -26,7 +27,8 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     //var counter: Int = 0
     //var debugX = 0
     //var modeSetting: Bool = false
-    
+    let soundFileNames = ["CidadeConvertAudio"]
+    var audioPlayers = [AVAudioPlayer]()
     
     @IBOutlet var timeHoursInput: UITextField!
     @IBOutlet var timeMinutesInput: UITextField!
@@ -104,8 +106,20 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
         
         //self.intervalHoursInput.mask = "#"
         
+        for sound in soundFileNames {
+            do {
+                // Try to do something
+                let url = NSURL(fileURLWithPath: Bundle.main.path(forResource: sound, ofType: "wav")!)
+                let audioPlayer = try AVAudioPlayer(contentsOf: url as URL)
+                
+                audioPlayers.append(audioPlayer)
+            }
         
-        
+        catch {
+            // Catch error thrown
+            audioPlayers.append(AVAudioPlayer())
+        }
+    }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -126,7 +140,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     }*/
     func sendNotifcation() {
         if isGrantedAccess {
-            let content = UNMutableNotificationContent()
+            /*let content = UNMutableNotificationContent()
             content.badge = 0
             content.title = "TimeMinder Interval Alert"
             //content.body = "\(timeInterval) \(keepRepeating) \(userSettings.counter) \(String(describing: content.badge))"
@@ -153,6 +167,17 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
                 if let error = error {
                     print("error posting notification: \(error.localizedDescription)")
                 }
+            }*/
+            
+            let userMode = userSettings.modeSettings
+            if userMode == true {     // This mode is for sound Alerts. Currently the sound isn't customizable
+                //content.sound = UNNotificationSound(named: "CidadeConvertAudio.wav")
+                audioPlayers[0].play()
+            }
+            else {
+                // Vibrate for Alerts if User Selected Discrete/Silent Mode
+                print("vibrate")
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
         }
         
