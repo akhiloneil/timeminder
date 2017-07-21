@@ -52,7 +52,7 @@ let center = UNUserNotificationCenter.current()
             if !timer.isValid && (userSettings.counter < userSettings.repeatCount) {
                     timer = Timer.scheduledTimer(withTimeInterval: 100, repeats: false, block: { (timer) in
                         application.endBackgroundTask(x)
-                        application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
+                        application.beginBackgroundTask(withName: "showAlert", expirationHandler: nil)
                 
                 
                 
