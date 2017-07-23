@@ -2,7 +2,7 @@
 //  PacerViewController.swift
 //  Time Keeper
 //
-//  Created by Akhil Sharma on 7/3/17.
+//  Created by Akhil Sharma on 7/20/17.
 //  Copyright © 2017 Akhil Sharma. All rights reserved.
 //
 
@@ -10,6 +10,7 @@ import UIKit
 import UserNotifications
 import AudioToolbox
 import AVFoundation
+import CoreMotion
 
 struct userSettings {
     static var modeSettings = true
@@ -29,6 +30,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     //var modeSetting: Bool = false
     let soundFileNames = ["CidadeConvertAudio"]
     var audioPlayers = [AVAudioPlayer]()
+    var motionManager = CMMotionManager()
     
     @IBOutlet var timeHoursInput: UITextField!
     @IBOutlet var timeMinutesInput: UITextField!
@@ -37,13 +39,38 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     @IBOutlet var intervalMinutesInput: UITextField!
     @IBOutlet var intervalSecondsInput: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var statusLabel: UILabel!
     
     private var timer = Timer()
+    
+    /*override func viewDidAppear(_ animated: Bool) {
+        
+        motionManager.gyroUpdateInterval = 0.5
+        
+        motionManager.startGyroUpdates(to: OperationQueue.current!) { (data, error) in
+            if let myData = data {
+                if myData.rotationRate.x > 3
+                {
+                    print("You tilted your device")
+                }
+            }
+        }
+    }*/
 
+    override func viewDidAppear(_ animated: Bool) {
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: false, block: { (timer) in
+        if launch && self.isGrantedAccess {
+            self.sendAlert(title: "Welcome to TimeMinder", message: "To use the app, specifiy how long you want the alerts to continue for and how often you would like them. As of V1.1, the app doesn't work in the background.")
+            launch = false
+            }})
+
+    }
     @IBAction func buttonPressed(_ sender: UIButton)
     {
         startTimer()
         activityIndicator.startAnimating()
+        statusLabel.text = "Starting \(userSettings.counter + 1) of \(userSettings.repeatCount)"
+        
         /*let content = UNMutableNotificationContent()
         content.title = "The 5 seconds are up"
         content.subtitle = "They are up now"
@@ -61,6 +88,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     {
         stopTimer()
         activityIndicator.stopAnimating()
+        statusLabel.text = "Status: Not running"
     }
     
     @IBAction func resetButton (_ sender: UIButton)
@@ -87,22 +115,33 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UNUserNotificationCenter.current().delegate = self
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        
+        if launchedBefore
+        {
+            launch = false
+        }
+        else {
+            launch = true
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
+
+                UNUserNotificationCenter.current().delegate = self
         
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(granted, error) in
                 self.isGrantedAccess = granted
         }
         // Add "STOP" button for the notification
-        let stopAction = UNNotificationAction(identifier: "stop.action", title: "Stop", options: [])
+        //let stopAction = UNNotificationAction(identifier: "stop.action", title: "Stop", options: [])
         
-        let timerCategory = UNNotificationCategory(identifier: "timer.category", actions: [stopAction], intentIdentifiers: [], options: [])
-        UNUserNotificationCenter.current().setNotificationCategories([timerCategory])
+        //let timerCategory = UNNotificationCategory(identifier: "timer.category", actions: [stopAction], intentIdentifiers: [], options: [])
+        //UNUserNotificationCenter.current().setNotificationCategories([timerCategory])
         
         intervalHoursInput.delegate = self
         intervalMinutesInput.delegate = self
         intervalSecondsInput.delegate = self
         
-        UNMutableNotificationContent().badge = 0
+        //UNMutableNotificationContent().badge = 0
         
         //self.intervalHoursInput.mask = "#"
         
@@ -119,7 +158,18 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
             // Catch error thrown
             audioPlayers.append(AVAudioPlayer())
         }
+            
     }
+        
+        let session = AVAudioSession.sharedInstance()
+        
+        do {
+            try session.setCategory(AVAudioSessionCategoryPlayback)
+        }
+        
+        catch {
+            
+        }
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -140,7 +190,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     }*/
     func sendNotifcation() {
         if isGrantedAccess {
-            /*let content = UNMutableNotificationContent()
+            let content = UNMutableNotificationContent()
             content.badge = 0
             content.title = "TimeMinder Interval Alert"
             //content.body = "\(timeInterval) \(keepRepeating) \(userSettings.counter) \(String(describing: content.badge))"
@@ -167,18 +217,19 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
                 if let error = error {
                     print("error posting notification: \(error.localizedDescription)")
                 }
-            }*/
+            }
             
-            let userMode = userSettings.modeSettings
+            /*let userMode = userSettings.modeSettings
             if userMode == true {     // This mode is for sound Alerts. Currently the sound isn't customizable
                 //content.sound = UNNotificationSound(named: "CidadeConvertAudio.wav")
                 audioPlayers[0].play()
+                AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
             }
             else {
                 // Vibrate for Alerts if User Selected Discrete/Silent Mode
                 print("vibrate")
                 AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-            }
+            }*/
         }
         
     }
@@ -301,6 +352,17 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
             resetValues()
         }
 
+        if totalTime > 14400 {
+            print("total time too long")
+            sendAlert(title: "Error: Max time is 4 Hours", message: "Please choose a total time of 4 hours or less")
+            appProblem = true
+            resetValues()
+            
+        }
+
+        
+        
+        
         if appProblem != true && totalTime != timeInterval {
         userSettings.repeatCount = Int(floor(totalTime/timeInterval))
         print("Skipping if statement")
@@ -311,6 +373,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
             appProblem = false
         }
         
+       
         
         //if (counter >= debugX) {
         //    keepRepeating = false
@@ -320,9 +383,10 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
         
         
         // The piece of code that starts the timer...
-        if isGrantedAccess && !timer.isValid && totalTime < 14401 && appProblem != true{
+        if isGrantedAccess && !timer.isValid && appProblem != true{
             timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: self.keepRepeating, block: { (timer) in
                 self.sendNotifcation()
+                self.statusLabel.text = "Starting \(userSettings.counter + 2) of \(userSettings.repeatCount)"
                 //print("vibrate")
                 //AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                 //self.sendNotifcation()
@@ -331,7 +395,8 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
                 //self.vibratePhone(vibrationCount: 1)
                 if userSettings.counter >= userSettings.repeatCount {
                     timer.invalidate()
-                    UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+                    self.sendAlert(title: "TimeMinders are finished", message: "Task completed")
+                    //UNUserNotificationCenter.current().removeAllDeliveredNotifications()
                     self.resetValues()
                     self.keepRepeating = false
                     print("Shutting timer off")
@@ -350,12 +415,6 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
                     resetValues()
                 
             }
-            if totalTime > 14400 {
-                    print("total time too long")
-                    sendAlert(title: "Error: Max time is 4 Hours", message: "Please choose a total time of 4 hours or less")
-                    resetValues()
-                
-            }
         }
         
     }
@@ -365,8 +424,8 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
         timer.invalidate()
         print("stopping all alerts")
         // clear out any pending and delivered notifications
-        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
-        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        //UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        //UNUserNotificationCenter.current().removeAllDeliveredNotifications()
         // reset total time and interval time
         resetValues()
     }
@@ -383,7 +442,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
         intervalSecondsInput.text = ""
         userSettings.counter = 0       // Globabl var counter found in struct userSettings
         activityIndicator.stopAnimating()
-        
+        statusLabel.text = "Status: Not running"
         
     }
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
