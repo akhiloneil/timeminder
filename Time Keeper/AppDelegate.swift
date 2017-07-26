@@ -57,10 +57,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        if UIApplication.shared.currentUserNotificationSettings?.types == .none {
+            // not registered
+            userSettings.isGrantedAccess = false
+            print("user didn't allow notifications")
+        } else {
+            // registered in some way
+            userSettings.isGrantedAccess = true
+        }
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        if UIApplication.shared.currentUserNotificationSettings?.types == .none {
+            // not registered
+            userSettings.isGrantedAccess = false
+            print("user didn't allow notifications")
+        } else {
+            // registered in some way
+            userSettings.isGrantedAccess = true
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
