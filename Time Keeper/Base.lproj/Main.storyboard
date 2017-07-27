@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yVc-kV-Kg3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yVc-kV-Kg3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -283,12 +283,6 @@
                                 <rect key="frame" x="177.5" y="262" width="20" height="20"/>
                                 <color key="color" red="0.93616589139999995" green="1" blue="0.50749433340000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status: Not running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6y-53-Q6c">
-                                <rect key="frame" x="114" y="525" width="148.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.96350692406410543" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83160298944296474" green="1" blue="0.78875798119077167" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -317,7 +311,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="8uv-xX-Fqg" secondAttribute="trailing" constant="250" id="Usj-Vf-R2R"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ws0-fZ-wxm" secondAttribute="bottom" id="V7j-1P-Wvk"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="VnP-XE-a5Z"/>
-                            <constraint firstItem="s6y-53-Q6c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YWo-Lf-1ou"/>
                             <constraint firstItem="8uv-xX-Fqg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ce2-Sy-saT"/>
                             <constraint firstItem="d7q-vw-F69" firstAttribute="top" secondItem="auE-kv-sD8" secondAttribute="bottom" constant="8.5" id="eMC-nA-8Wm"/>
                             <constraint firstItem="Wdq-j1-PIM" firstAttribute="top" secondItem="i9R-Ly-H1O" secondAttribute="bottom" constant="20" id="gbt-Ot-j2e"/>
@@ -335,7 +328,6 @@
                             <constraint firstItem="Yv8-xg-b9H" firstAttribute="centerX" secondItem="JDa-Gd-bVP" secondAttribute="centerX" id="uEd-H2-Wgd"/>
                             <constraint firstItem="Wdq-j1-PIM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wDt-J0-NMR"/>
                             <constraint firstItem="8uv-xX-Fqg" firstAttribute="top" secondItem="Wdq-j1-PIM" secondAttribute="bottom" constant="17" id="wir-ld-blG"/>
-                            <constraint firstItem="s6y-53-Q6c" firstAttribute="top" secondItem="Wdq-j1-PIM" secondAttribute="bottom" constant="25" id="xf1-G3-kqE"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="106-JD-pQF" appends="YES" id="TMv-gs-Kfw"/>
@@ -343,11 +335,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Set TimeMinder" id="6o7-9Y-V6y"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="crX-Cs-ai5" id="cCH-74-gdR"/>
                         <outlet property="intervalHoursInput" destination="WMn-Ii-Omw" id="VmH-rq-Pjc"/>
                         <outlet property="intervalMinutesInput" destination="a58-TM-kTR" id="J95-uT-U9r"/>
                         <outlet property="intervalSecondsInput" destination="zbE-Rr-Sxr" id="UIk-IB-mma"/>
-                        <outlet property="statusLabel" destination="s6y-53-Q6c" id="dgv-lg-Uf4"/>
                         <outlet property="timeHoursInput" destination="OE4-rc-XUQ" id="dmn-5O-IqQ"/>
                         <outlet property="timeMinutesInput" destination="UFA-tO-yqr" id="WOF-EG-L5z"/>
                         <outlet property="timeSecondsInput" destination="ReY-ge-WXP" id="fHk-8n-dFb"/>
