@@ -17,6 +17,8 @@ struct userSettings {
 }
 
 class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, UITextFieldDelegate{
+    
+    //var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var isGrantedAccess = false
     var timeInterval: Double = 0.0
     var totalTime: Double = 0.0
@@ -34,10 +36,14 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     @IBOutlet var intervalMinutesInput: UITextField!
     @IBOutlet var intervalSecondsInput: UITextField!
     
+    @IBOutlet weak var ActivityIndicatorView: UIActivityIndicatorView!
+    
     private var timer = Timer()
 
     @IBAction func buttonPressed(_ sender: UIButton)
     {
+        self.ActivityIndicatorView.hidesWhenStopped = true;
+        self.ActivityIndicatorView.startAnimating();
         startTimer()
         
         /*let content = UNMutableNotificationContent()
@@ -56,11 +62,13 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     @IBAction func stopButton(_ sender: UIButton)
     {
         stopTimer()
+        //self.ActivityIndicatorView.stopAnimating()
     }
     
     @IBAction func resetButton (_ sender: UIButton)
     {
         resetValues()
+        //self.ActivityIndicatorView.stopAnimating()
     }
     
     /*let numberFormatter: NumberFormatter = {
@@ -299,6 +307,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
                 if userSettings.counter >= userSettings.repeatCount {
                     timer.invalidate()
                     self.sendAlert(title: "TimeMinders are finished", message: "Task completed")
+                self.ActivityIndicatorView.stopAnimating();
                     UNUserNotificationCenter.current().removeAllDeliveredNotifications()
                     self.resetValues()
                     self.keepRepeating = false
@@ -341,6 +350,7 @@ class PacerViewController: UIViewController, UNUserNotificationCenterDelegate, U
     
     func resetValues() {
         // reset all values
+        self.ActivityIndicatorView.stopAnimating()
         timeInterval = 0.0
         totalTime = 0.0
         timeHoursInput.text = ""

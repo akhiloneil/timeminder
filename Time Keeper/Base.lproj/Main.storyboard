@@ -335,6 +335,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Set TimeMinder" id="6o7-9Y-V6y"/>
                     <connections>
+                        <outlet property="ActivityIndicatorView" destination="crX-Cs-ai5" id="ANT-E0-x20"/>
                         <outlet property="intervalHoursInput" destination="WMn-Ii-Omw" id="VmH-rq-Pjc"/>
                         <outlet property="intervalMinutesInput" destination="a58-TM-kTR" id="J95-uT-U9r"/>
                         <outlet property="intervalSecondsInput" destination="zbE-Rr-Sxr" id="UIk-IB-mma"/>
