@@ -28,7 +28,7 @@ let center = UNUserNotificationCenter.current()
         //let notificationSettings = UNNotificationSettings(forTypes: [.badge, .alert, .sound], categories:nil)
         //application.registerUserNotificationSettings(notificationSettings)
         
-                application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
+                //application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
         
                 return true
     } 
@@ -45,25 +45,25 @@ let center = UNUserNotificationCenter.current()
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         print(userSettings.counter)
         print(userSettings.repeatCount) // For Debugging. Global var for the repeat count on the timer in the pacer view controller
-        let x = UIBackgroundTaskIdentifier()
-        //if (userSettings.counter < userSettings.repeatCount) {
-            //print("made it here into background mode")
-            var timer = Timer()
-            if !timer.isValid && (userSettings.counter < userSettings.repeatCount) {
-                    timer = Timer.scheduledTimer(withTimeInterval: 100, repeats: false, block: { (timer) in
-                        application.endBackgroundTask(x)
-                        application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
-                
-                
-                
-                    })
-        }
-
-        
-        else {
-            application.endBackgroundTask(x)
-            print("ended background task because the timer was up")
-        }
+//        let x = UIBackgroundTaskIdentifier()
+//        //if (userSettings.counter < userSettings.repeatCount) {
+//            //print("made it here into background mode")
+//            var timer = Timer()
+//            if !timer.isValid && (userSettings.counter < userSettings.repeatCount) {
+//                    timer = Timer.scheduledTimer(withTimeInterval: 100, repeats: false, block: { (timer) in
+//                        application.endBackgroundTask(x)
+//                        application.beginBackgroundTask(withName: "showNotification", expirationHandler: nil)
+//                
+//                
+//                
+//                    })
+//        }
+//
+//        
+//        else {
+//            application.endBackgroundTask(x)
+//            print("ended background task because the timer was up")
+//        }
         
         
     }
