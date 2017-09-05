@@ -18,6 +18,7 @@
 		1E8A7DB31F0C203300744AB3 /* CidadeConvertAudio.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */; };
 		1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */; };
 		1E8D33A51F1602D800EAB2AC /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D33A41F1602D800EAB2AC /* PageVC.swift */; };
+		1ECB7C5E1F5E5D9000D961C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB7C5D1F5E5D9000D961C6 /* Default-568h@2x.png */; };
 		1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */; };
 		1EEECB551F1878E8000A19D5 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB541F1878E8000A19D5 /* BounceButton.swift */; };
 /* End PBXBuildFile section */
@@ -62,15 +63,15 @@
 		1E8A7D8C1F0B0B4200744AB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Base; path = ../Base.lproj; sourceTree = "<group>"; };
 		1E8A7D8E1F0B0B4200744AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		1E8A7D931F0B0B4200744AB3 /* Time KeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time KeeperTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E8A7D971F0B0B4200744AB3 /* Time_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_KeeperTests.swift; sourceTree = "<group>"; };
-		1E8A7D991F0B0B4200744AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8A7D971F0B0B4200744AB3 /* Time_KeeperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Time_KeeperTests.swift; path = "Time KeeperTests/Time_KeeperTests.swift"; sourceTree = SOURCE_ROOT; };
 		1E8A7D9E1F0B0B4200744AB3 /* Time KeeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Time KeeperUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E8A7DA21F0B0B4200744AB3 /* Time_KeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time_KeeperUITests.swift; sourceTree = "<group>"; };
-		1E8A7DA41F0B0B4200744AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8A7DA21F0B0B4200744AB3 /* Time_KeeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Time_KeeperUITests.swift; path = "Time KeeperUITests/Time_KeeperUITests.swift"; sourceTree = SOURCE_ROOT; };
+		1E8A7DA41F0B0B4200744AB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Time KeeperUITests/Info.plist"; sourceTree = SOURCE_ROOT; };
 		1E8A7DB01F0B244C00744AB3 /* PacerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacerViewController.swift; sourceTree = SOURCE_ROOT; };
-		1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CidadeConvertAudio.wav; sourceTree = "<group>"; };
+		1E8A7DB21F0C203300744AB3 /* CidadeConvertAudio.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = CidadeConvertAudio.wav; sourceTree = SOURCE_ROOT; };
 		1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = SOURCE_ROOT; };
 		1E8D33A41F1602D800EAB2AC /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = SOURCE_ROOT; };
+		1ECB7C5D1F5E5D9000D961C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = SOURCE_ROOT; };
 		1EEECB541F1878E8000A19D5 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -107,7 +108,7 @@
 				1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1E4A1FF41F21A1C500A37D03 /* Alert Sounds */ = {
 			isa = PBXGroup;
@@ -120,6 +121,7 @@
 		1E8A7D761F0B0B4200744AB3 = {
 			isa = PBXGroup;
 			children = (
+				1ECB7C5D1F5E5D9000D961C6 /* Default-568h@2x.png */,
 				1E8A7D811F0B0B4200744AB3 /* Time Keeper */,
 				1E8A7D961F0B0B4200744AB3 /* Time KeeperTests */,
 				1E8A7DA11F0B0B4200744AB3 /* Time KeeperUITests */,
@@ -136,7 +138,7 @@
 				1E8A7D9E1F0B0B4200744AB3 /* Time KeeperUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1E8A7D811F0B0B4200744AB3 /* Time Keeper */ = {
 			isa = PBXGroup;
@@ -161,10 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				1E8A7D971F0B0B4200744AB3 /* Time_KeeperTests.swift */,
-				1E8A7D991F0B0B4200744AB3 /* Info.plist */,
 			);
 			path = "Time KeeperTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		1E8A7DA11F0B0B4200744AB3 /* Time KeeperUITests */ = {
 			isa = PBXGroup;
@@ -173,7 +174,7 @@
 				1E8A7DA41F0B0B4200744AB3 /* Info.plist */,
 			);
 			path = "Time KeeperUITests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -300,6 +301,7 @@
 				1E8A7D8D1F0B0B4200744AB3 /* LaunchScreen.storyboard in Resources */,
 				1E8A7D8A1F0B0B4200744AB3 /* Assets.xcassets in Resources */,
 				1E8A7DB31F0C203300744AB3 /* CidadeConvertAudio.wav in Resources */,
+				1ECB7C5E1F5E5D9000D961C6 /* Default-568h@2x.png in Resources */,
 				1E6188351F5E42E70005AEF0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,7 +382,7 @@
 		1E8A7DA51F0B0B4200744AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -431,7 +433,7 @@
 		1E8A7DA61F0B0B4200744AB3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
