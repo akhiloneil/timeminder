@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1E4A1FF61F21A22700A37D03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */; };
 		1E6188351F5E42E70005AEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6188341F5E42E70005AEF0 /* Main.storyboard */; };
+		1E80EA831F5E6E4F009650F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EA811F5E6E4F009650F8 /* LaunchScreen.storyboard */; };
 		1E8A7D831F0B0B4200744AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */; };
 		1E8A7D8A1F0B0B4200744AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */; };
 		1E8A7D8D1F0B0B4200744AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */; };
@@ -59,6 +60,7 @@
 		1E3B9F8E1F13D158007D9D06 /* Time Keeper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Time Keeper.entitlements"; sourceTree = SOURCE_ROOT; };
 		1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1E6188341F5E42E70005AEF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		1E80EA821F5E6E4F009650F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E8A7D7F1F0B0B4200744AB3 /* Time Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -157,6 +159,7 @@
 				1EEECB541F1878E8000A19D5 /* BounceButton.swift */,
 				1E6188341F5E42E70005AEF0 /* Main.storyboard */,
 				1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */,
+				1E80EA811F5E6E4F009650F8 /* LaunchScreen.storyboard */,
 				1ECB7C5F1F5E626E00D961C6 /* GoogleService-Info.plist */,
 				1ECB7C611F5E639400D961C6 /* GoogleMobileAds.framework */,
 				1E8A7D8E1F0B0B4200744AB3 /* Info.plist */,
@@ -309,6 +312,7 @@
 				1E8A7D8A1F0B0B4200744AB3 /* Assets.xcassets in Resources */,
 				1E8A7DB31F0C203300744AB3 /* CidadeConvertAudio.wav in Resources */,
 				1ECB7C5E1F5E5D9000D961C6 /* Default-568h@2x.png in Resources */,
+				1E80EA831F5E6E4F009650F8 /* LaunchScreen.storyboard in Resources */,
 				1E6188351F5E42E70005AEF0 /* Main.storyboard in Resources */,
 				1ECB7C601F5E626E00D961C6 /* GoogleService-Info.plist in Resources */,
 			);
@@ -376,6 +380,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1E80EA811F5E6E4F009650F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E80EA821F5E6E4F009650F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
