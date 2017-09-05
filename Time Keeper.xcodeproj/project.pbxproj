@@ -19,6 +19,8 @@
 		1E8A7DB51F0C833D00744AB3 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */; };
 		1E8D33A51F1602D800EAB2AC /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8D33A41F1602D800EAB2AC /* PageVC.swift */; };
 		1ECB7C5E1F5E5D9000D961C6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB7C5D1F5E5D9000D961C6 /* Default-568h@2x.png */; };
+		1ECB7C601F5E626E00D961C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1ECB7C5F1F5E626E00D961C6 /* GoogleService-Info.plist */; };
+		1ECB7C621F5E639400D961C6 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ECB7C611F5E639400D961C6 /* GoogleMobileAds.framework */; };
 		1EEECB531F186863000A19D5 /* TextFieldMaxLengths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */; };
 		1EEECB551F1878E8000A19D5 /* BounceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEECB541F1878E8000A19D5 /* BounceButton.swift */; };
 /* End PBXBuildFile section */
@@ -72,6 +74,8 @@
 		1E8A7DB41F0C833D00744AB3 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = SOURCE_ROOT; };
 		1E8D33A41F1602D800EAB2AC /* PageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = SOURCE_ROOT; };
 		1ECB7C5D1F5E5D9000D961C6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1ECB7C5F1F5E626E00D961C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1ECB7C611F5E639400D961C6 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1EEECB521F186863000A19D5 /* TextFieldMaxLengths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldMaxLengths.swift; sourceTree = SOURCE_ROOT; };
 		1EEECB541F1878E8000A19D5 /* BounceButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BounceButton.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ECB7C621F5E639400D961C6 /* GoogleMobileAds.framework in Frameworks */,
 				1E4A1FF61F21A22700A37D03 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +157,8 @@
 				1EEECB541F1878E8000A19D5 /* BounceButton.swift */,
 				1E6188341F5E42E70005AEF0 /* Main.storyboard */,
 				1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */,
+				1ECB7C5F1F5E626E00D961C6 /* GoogleService-Info.plist */,
+				1ECB7C611F5E639400D961C6 /* GoogleMobileAds.framework */,
 				1E8A7D8E1F0B0B4200744AB3 /* Info.plist */,
 				1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */,
 				1E4A1FF41F21A1C500A37D03 /* Alert Sounds */,
@@ -303,6 +310,7 @@
 				1E8A7DB31F0C203300744AB3 /* CidadeConvertAudio.wav in Resources */,
 				1ECB7C5E1F5E5D9000D961C6 /* Default-568h@2x.png in Resources */,
 				1E6188351F5E42E70005AEF0 /* Main.storyboard in Resources */,
+				1ECB7C601F5E626E00D961C6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +492,7 @@
 					"$(PROJECT_DIR)/Time\\ Keeper",
 					"$(PROJECT_DIR)/Time\\ Keeper",
 					"$(PROJECT_DIR)/Time\\ Keeper",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -503,6 +512,7 @@
 					"$(PROJECT_DIR)/Time\\ Keeper",
 					"$(PROJECT_DIR)/Time\\ Keeper",
 					"$(PROJECT_DIR)/Time\\ Keeper",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Time Keeper/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
