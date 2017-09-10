@@ -10,6 +10,15 @@
 		1E4A1FF61F21A22700A37D03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */; };
 		1E6188351F5E42E70005AEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E6188341F5E42E70005AEF0 /* Main.storyboard */; };
 		1E80EA831F5E6E4F009650F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EA811F5E6E4F009650F8 /* LaunchScreen.storyboard */; };
+		1E80EA8A1F65EEA8009650F8 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EA881F65EEA8009650F8 /* Interface.storyboard */; };
+		1E80EA8C1F65EEA9009650F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EA8B1F65EEA9009650F8 /* Assets.xcassets */; };
+		1E80EA931F65EEA9009650F8 /* TimeMinder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E80EA921F65EEA9009650F8 /* TimeMinder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1E80EA9A1F65EEA9009650F8 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EA991F65EEA9009650F8 /* InterfaceController.swift */; };
+		1E80EA9C1F65EEA9009650F8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EA9B1F65EEA9009650F8 /* ExtensionDelegate.swift */; };
+		1E80EA9E1F65EEA9009650F8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EA9D1F65EEA9009650F8 /* NotificationController.swift */; };
+		1E80EAA01F65EEA9009650F8 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E80EA9F1F65EEA9009650F8 /* ComplicationController.swift */; };
+		1E80EAA21F65EEA9009650F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E80EAA11F65EEA9009650F8 /* Assets.xcassets */; };
+		1E80EAA61F65EEA9009650F8 /* TimeMinder.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1E80EA861F65EEA8009650F8 /* TimeMinder.app */; };
 		1E8A7D831F0B0B4200744AB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */; };
 		1E8A7D8A1F0B0B4200744AB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */; };
 		1E8A7D8D1F0B0B4200744AB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */; };
@@ -27,6 +36,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1E80EA941F65EEA9009650F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E8A7D771F0B0B4200744AB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E80EA911F65EEA9009650F8;
+			remoteInfo = "TimeMinder Extension";
+		};
+		1E80EAA41F65EEA9009650F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E8A7D771F0B0B4200744AB3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E80EA851F65EEA8009650F8;
+			remoteInfo = TimeMinder;
+		};
 		1E8A7D941F0B0B4200744AB3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1E8A7D771F0B0B4200744AB3 /* Project object */;
@@ -50,8 +73,20 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				1E80EAA61F65EEA9009650F8 /* TimeMinder.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E80EAAC1F65EEA9009650F8 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1E80EA931F65EEA9009650F8 /* TimeMinder Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -61,6 +96,18 @@
 		1E4A1FF51F21A22700A37D03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1E6188341F5E42E70005AEF0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		1E80EA821F5E6E4F009650F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1E80EA861F65EEA8009650F8 /* TimeMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E80EA891F65EEA8009650F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		1E80EA8B1F65EEA9009650F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E80EA8D1F65EEA9009650F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E80EA921F65EEA9009650F8 /* TimeMinder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TimeMinder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E80EA981F65EEA9009650F8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		1E80EA991F65EEA9009650F8 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		1E80EA9B1F65EEA9009650F8 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		1E80EA9D1F65EEA9009650F8 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		1E80EA9F1F65EEA9009650F8 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		1E80EAA11F65EEA9009650F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E80EAA31F65EEA9009650F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E8A7D7F1F0B0B4200744AB3 /* Time Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Time Keeper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8A7D821F0B0B4200744AB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		1E8A7D891F0B0B4200744AB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
@@ -83,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1E80EA8F1F65EEA9009650F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E8A7D7C1F0B0B4200744AB3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,6 +179,38 @@
 			name = "Alert Sounds";
 			sourceTree = SOURCE_ROOT;
 		};
+		1E80EA871F65EEA8009650F8 /* TimeMinder */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EA881F65EEA8009650F8 /* Interface.storyboard */,
+				1E80EA8B1F65EEA9009650F8 /* Assets.xcassets */,
+				1E80EA8D1F65EEA9009650F8 /* Info.plist */,
+			);
+			path = TimeMinder;
+			sourceTree = "<group>";
+		};
+		1E80EA961F65EEA9009650F8 /* TimeMinder Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EA991F65EEA9009650F8 /* InterfaceController.swift */,
+				1E80EA9B1F65EEA9009650F8 /* ExtensionDelegate.swift */,
+				1E80EA9D1F65EEA9009650F8 /* NotificationController.swift */,
+				1E80EA9F1F65EEA9009650F8 /* ComplicationController.swift */,
+				1E80EAA11F65EEA9009650F8 /* Assets.xcassets */,
+				1E80EAA31F65EEA9009650F8 /* Info.plist */,
+				1E80EA971F65EEA9009650F8 /* Supporting Files */,
+			);
+			path = "TimeMinder Extension";
+			sourceTree = "<group>";
+		};
+		1E80EA971F65EEA9009650F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1E80EA981F65EEA9009650F8 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		1E8A7D761F0B0B4200744AB3 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +218,8 @@
 				1E8A7D811F0B0B4200744AB3 /* Time Keeper */,
 				1E8A7D961F0B0B4200744AB3 /* Time KeeperTests */,
 				1E8A7DA11F0B0B4200744AB3 /* Time KeeperUITests */,
+				1E80EA871F65EEA8009650F8 /* TimeMinder */,
+				1E80EA961F65EEA9009650F8 /* TimeMinder Extension */,
 				1E8A7D801F0B0B4200744AB3 /* Products */,
 				1E3B9F8F1F13D159007D9D06 /* Frameworks */,
 			);
@@ -143,6 +231,8 @@
 				1E8A7D7F1F0B0B4200744AB3 /* Time Keeper.app */,
 				1E8A7D931F0B0B4200744AB3 /* Time KeeperTests.xctest */,
 				1E8A7D9E1F0B0B4200744AB3 /* Time KeeperUITests.xctest */,
+				1E80EA861F65EEA8009650F8 /* TimeMinder.app */,
+				1E80EA921F65EEA9009650F8 /* TimeMinder Extension.appex */,
 			);
 			name = Products;
 			sourceTree = SOURCE_ROOT;
@@ -189,6 +279,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1E80EA851F65EEA8009650F8 /* TimeMinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E80EAAD1F65EEA9009650F8 /* Build configuration list for PBXNativeTarget "TimeMinder" */;
+			buildPhases = (
+				1E80EA841F65EEA8009650F8 /* Resources */,
+				1E80EAAC1F65EEA9009650F8 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E80EA951F65EEA9009650F8 /* PBXTargetDependency */,
+			);
+			name = TimeMinder;
+			productName = TimeMinder;
+			productReference = 1E80EA861F65EEA8009650F8 /* TimeMinder.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		1E80EA911F65EEA9009650F8 /* TimeMinder Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E80EAAB1F65EEA9009650F8 /* Build configuration list for PBXNativeTarget "TimeMinder Extension" */;
+			buildPhases = (
+				1E80EA8E1F65EEA9009650F8 /* Sources */,
+				1E80EA8F1F65EEA9009650F8 /* Frameworks */,
+				1E80EA901F65EEA9009650F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TimeMinder Extension";
+			productName = "TimeMinder Extension";
+			productReference = 1E80EA921F65EEA9009650F8 /* TimeMinder Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		1E8A7D7E1F0B0B4200744AB3 /* Time Keeper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E8A7DA71F0B0B4200744AB3 /* Build configuration list for PBXNativeTarget "Time Keeper" */;
@@ -201,6 +325,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1E80EAA51F65EEA9009650F8 /* PBXTargetDependency */,
 			);
 			name = "Time Keeper";
 			productName = "Time Keeper";
@@ -256,6 +381,16 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Akhil Sharma";
 				TargetAttributes = {
+					1E80EA851F65EEA8009650F8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3755WT4J99;
+						ProvisioningStyle = Automatic;
+					};
+					1E80EA911F65EEA9009650F8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3755WT4J99;
+						ProvisioningStyle = Automatic;
+					};
 					1E8A7D7E1F0B0B4200744AB3 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 3755WT4J99;
@@ -299,11 +434,30 @@
 				1E8A7D7E1F0B0B4200744AB3 /* Time Keeper */,
 				1E8A7D921F0B0B4200744AB3 /* Time KeeperTests */,
 				1E8A7D9D1F0B0B4200744AB3 /* Time KeeperUITests */,
+				1E80EA851F65EEA8009650F8 /* TimeMinder */,
+				1E80EA911F65EEA9009650F8 /* TimeMinder Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1E80EA841F65EEA8009650F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E80EA8C1F65EEA9009650F8 /* Assets.xcassets in Resources */,
+				1E80EA8A1F65EEA8009650F8 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E80EA901F65EEA9009650F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E80EAA21F65EEA9009650F8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E8A7D7D1F0B0B4200744AB3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +489,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1E80EA8E1F65EEA9009650F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E80EA9E1F65EEA9009650F8 /* NotificationController.swift in Sources */,
+				1E80EAA01F65EEA9009650F8 /* ComplicationController.swift in Sources */,
+				1E80EA9C1F65EEA9009650F8 /* ExtensionDelegate.swift in Sources */,
+				1E80EA9A1F65EEA9009650F8 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E8A7D7B1F0B0B4200744AB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -367,6 +532,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1E80EA951F65EEA9009650F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E80EA911F65EEA9009650F8 /* TimeMinder Extension */;
+			targetProxy = 1E80EA941F65EEA9009650F8 /* PBXContainerItemProxy */;
+		};
+		1E80EAA51F65EEA9009650F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E80EA851F65EEA8009650F8 /* TimeMinder */;
+			targetProxy = 1E80EAA41F65EEA9009650F8 /* PBXContainerItemProxy */;
+		};
 		1E8A7D951F0B0B4200744AB3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1E8A7D7E1F0B0B4200744AB3 /* Time Keeper */;
@@ -388,6 +563,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		1E80EA881F65EEA8009650F8 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E80EA891F65EEA8009650F8 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		1E8A7D8B1F0B0B4200744AB3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -399,6 +582,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1E80EAA71F65EEA9009650F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3755WT4J99;
+				IBSC_MODULE = TimeMinder_Extension;
+				INFOPLIST_FILE = TimeMinder/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhil100sharma100.TimeMinder.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		1E80EAA81F65EEA9009650F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3755WT4J99;
+				IBSC_MODULE = TimeMinder_Extension;
+				INFOPLIST_FILE = TimeMinder/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhil100sharma100.TimeMinder.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		1E80EAA91F65EEA9009650F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 3755WT4J99;
+				INFOPLIST_FILE = "TimeMinder Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhil100sharma100.TimeMinder.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		1E80EAAA1F65EEA9009650F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 3755WT4J99;
+				INFOPLIST_FILE = "TimeMinder Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.akhil100sharma100.TimeMinder.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
 		1E8A7DA51F0B0B4200744AB3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -595,6 +852,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E80EAAB1F65EEA9009650F8 /* Build configuration list for PBXNativeTarget "TimeMinder Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E80EAA91F65EEA9009650F8 /* Debug */,
+				1E80EAAA1F65EEA9009650F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E80EAAD1F65EEA9009650F8 /* Build configuration list for PBXNativeTarget "TimeMinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E80EAA71F65EEA9009650F8 /* Debug */,
+				1E80EAA81F65EEA9009650F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1E8A7D7A1F0B0B4200744AB3 /* Build configuration list for PBXProject "Time Keeper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
